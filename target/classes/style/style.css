@@ -1,0 +1,114 @@
+.btn-1{
+     -fx-background-color: transparent;
+     -fx-cursor: hand;
+     -fx-text-fill: #000;
+     -fx-border-color: #ddd;
+     -fx-border-width: 1px;
+}
+
+.btn-1:hover{
+     -fx-background-color: #0C4B16;
+     -fx-text-fill: #fff;
+     -fx-border-width: 0px;
+}
+
+.close-btn{
+    -fx-background-color:transparent;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover{
+     -fx-background-color: #ee5363;
+}
+
+.nav1{
+    -fx-background-color: #6CE781;
+    -fx-background-radius: 5px;
+}
+
+.nav-2{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+    -fx-text-fill: #000;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+}
+
+.nav-btn:hover{
+     -fx-background-color: #6CE781;
+     -fx-text-fill: #fff;
+     -fx-border-width: 0px;
+}
+
+.out-btn{
+    -fx-background-color: #1c7b47;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.out-btn:hover{
+    -fx-background-color: #2ecf77;
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 6px;
+
+}
+
+.shadow{
+     -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.5), 8,0,0,0);
+}
+
+.table-view{
+    -fx-padding:0;
+    -fx-border-radius: 8px;
+    -fx-border-color:  #2ecf77;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:  #2ecf77;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 8px 8px 0 0;
+
+}
+
+.table-view .column-header, .filter{
+    -fx-size: 40px;
+    -fx-background-color:transparent;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill:#000;
+}
+
+.bt-4{
+    -fx-background-color:green;
+    -fx-border-width: 1px;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+
+.btn-5{
+    -fx-background-color:red;
+    -fx-border-width: 1px;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+
+.btn-6{
+     -fx-background-color:blue;
+     -fx-border-width: 1px;
+     -fx-text-fill: #fff;
+      -fx-cursor: hand;
+}
+
+.top{
+    -fx-background-color:  #2ecf77;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="522.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_proj.AddExpensesForm">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="83.0" prefHeight="522.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="115.0" prefWidth="750.0" styleClass="top" stylesheets="@../../../style/style.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="159.0" layoutY="44.0" prefHeight="46.0" prefWidth="458.0" text="Add Expenses " textFill="#170303">
+                     <font>
+                        <Font name="Century Gothic Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField layoutX="165.0" layoutY="251.0" prefHeight="46.0" prefWidth="418.0" promptText="Description" />
+            <ComboBox layoutX="165.0" layoutY="165.0" prefHeight="46.0" prefWidth="418.0" promptText="Select a category" />
+            <DatePicker layoutX="165.0" layoutY="328.0" prefHeight="46.0" prefWidth="418.0" />
+            <TextField layoutX="166.0" layoutY="399.0" prefHeight="46.0" prefWidth="418.0" promptText="Amount" />
+            <Label layoutX="168.0" layoutY="140.0" text="Category">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="226.0" text="Description">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="168.0" layoutY="305.0" text="Date">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="169.0" layoutY="377.0" text="Amount">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="346.0" layoutY="459.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="btn-6" stylesheets="@../../../style/style.css" text="Add " />
+            <Button layoutX="478.0" layoutY="459.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" styleClass="btn-5" stylesheets="@../../../style/style.css" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

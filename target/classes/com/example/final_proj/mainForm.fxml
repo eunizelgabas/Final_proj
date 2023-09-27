@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_proj.MainForm">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="118.0" layoutY="189.0" prefHeight="734.0" prefWidth="1126.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="56.0" prefWidth="1126.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="83.0" layoutY="25.0" text="Expenses Tracker">
+                           <font>
+                              <Font name="Century Gothic Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="25.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../asset/expenses.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="close" layoutX="1061.0" layoutY="18.0" mnemonicParsing="false" onAction="#close" styleClass="close-btn" stylesheets="@../../../style/style.css" text="X" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="678.0" prefWidth="334.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="213.0" prefWidth="307.0" styleClass="nav1" stylesheets="@../../../style/style.css">
+                           <children>
+                              <ImageView fitHeight="133.0" fitWidth="141.0" layoutX="73.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../asset/pfp.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="72.0" layoutY="166.0" prefHeight="23.0" prefWidth="164.0" text="Hello, name">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="257.0" prefHeight="391.0" prefWidth="307.0" styleClass="nav-2" stylesheets="@../../../style/style.css">
+                           <children>
+                              <Button fx:id="dashboardBtn" layoutX="4.0" layoutY="47.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="67.0" prefWidth="297.0" styleClass="nav-btn" stylesheets="@../../../style/style.css" text="Dashboard" />
+                              <Button fx:id="expensesBtn" layoutX="4.0" layoutY="140.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="67.0" prefWidth="297.0" styleClass="nav-btn" stylesheets="@../../../style/style.css" text="Expenses" />
+                              <Button fx:id="logoutBtn" layoutX="4.0" layoutY="236.0" mnemonicParsing="false" onAction="#logout" prefHeight="67.0" prefWidth="297.0" styleClass="nav-btn" stylesheets="@../../../style/style.css" text="Sign out" />
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="14.0" layoutY="246.0" prefHeight="3.0" prefWidth="307.0" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboardForm" layoutX="106.0" layoutY="103.0" prefHeight="668.0" prefWidth="792.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="25.0" layoutY="258.0" prefHeight="387.0" prefWidth="743.0" stylesheets="@../../../style/style.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="46.0" layoutY="102.0" prefHeight="387.0" prefWidth="743.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <BarChart fx:id="expensesBar" categoryGap="5.0" layoutX="5.0" layoutY="4.0" prefHeight="378.0" prefWidth="734.0" title="Expenses Chart">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="42.0" layoutY="14.0" prefHeight="200.0" prefWidth="715.0" style="-fx-background-color: #6CE781;" styleClass="shadow" stylesheets="@../../../style/style.css">
+                                 <children>
+                                    <Text layoutX="223.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Expenses" wrappingWidth="268.30224609375">
+                                       <font>
+                                          <Font name="Century Gothic" size="36.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="totalExpenses" alignment="CENTER" contentDisplay="CENTER" layoutY="71.0" prefHeight="98.0" prefWidth="710.0" text="0">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="48.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="expensesForm" layoutX="53.0" layoutY="81.0" prefHeight="668.0" prefWidth="792.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="668.0" prefWidth="792.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="10.0" layoutY="3.0" prefHeight="435.0" prefWidth="773.0">
+                                       <children>
+                                          <TableView fx:id="expensesTable" layoutX="8.0" layoutY="50.0" onMouseClicked="#selectExpenses" prefHeight="383.0" prefWidth="760.0" stylesheets="@../../../style/style.css">
+                                            <columns>
+                                              <TableColumn fx:id="col_Date" prefWidth="146.0" text="Date" />
+                                              <TableColumn fx:id="col_Category" minWidth="2.0" prefWidth="188.0" text="Category" />
+                                                <TableColumn fx:id="col_Desc" minWidth="0.0" prefWidth="201.0" text="Description" />
+                                                <TableColumn fx:id="col_Amount" minWidth="0.0" prefWidth="224.0" text="Amount" />
+                                            </columns>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                          </TableView>
+                                          <TextField fx:id="searchField" layoutX="547.0" layoutY="14.0" onAction="#search" prefHeight="31.0" prefWidth="217.0" promptText="Search" />
+                                          <Text layoutX="13.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expenses Table" wrappingWidth="142.55419921875">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="9.0" layoutY="461.0" prefHeight="200.0" prefWidth="770.0" stylesheets="@../../../style/style.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ComboBox fx:id="categoryField" layoutX="31.0" layoutY="47.0" onAction="#addCategoryListType" prefHeight="39.0" prefWidth="277.0" promptText="Category" />
+                                          <Label layoutX="31.0" layoutY="21.0" text="Category">
+                                             <font>
+                                                <Font name="Century Gothic" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="descField" layoutX="31.0" layoutY="119.0" prefHeight="45.0" prefWidth="277.0" promptText="Description" />
+                                          <Label layoutX="31.0" layoutY="95.0" text="Description">
+                                             <font>
+                                                <Font name="Century Gothic" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="dateField" layoutX="324.0" layoutY="46.0" prefHeight="43.0" prefWidth="240.0" />
+                                          <Label layoutX="324.0" layoutY="21.0" text="Date">
+                                             <font>
+                                                <Font name="Century Gothic" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="amountField" layoutX="326.0" layoutY="118.0" prefHeight="45.0" prefWidth="239.0" promptText="Amount" />
+                                          <Label layoutX="326.0" layoutY="94.0" text="Amount">
+                                             <font>
+                                                <Font name="Century Gothic" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="addExpenses" layoutX="603.0" layoutY="45.0" mnemonicParsing="false" onAction="#addExpensesAdd" prefHeight="31.0" prefWidth="134.0" styleClass="btn-6" stylesheets="@../../../style/style.css" text="Add" />
+                                          <Button fx:id="updateExpenses" layoutX="603.0" layoutY="88.0" mnemonicParsing="false" onAction="#updateExpenses" prefHeight="31.0" prefWidth="134.0" styleClass="bt-4" stylesheets="@../../../style/style.css" text="Edit" />
+                                          <Button fx:id="deleteExpenses" layoutX="603.0" layoutY="132.0" mnemonicParsing="false" onAction="#deleteExpenses" prefHeight="31.0" prefWidth="134.0" styleClass="btn-5" stylesheets="@../../../style/style.css" text="Delete" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
